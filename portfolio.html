@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio — 281 Production</title>
+<meta name="description" content="281 Production 作品集：婚禮、商業廣告、航拍、企業會議、旅遊宣傳、人像攝影。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html">281<span>Production</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav" class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html" aria-current="page">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head">
+    <p class="eyebrow">Selected work</p>
+    <h1>Portfolio</h1>
+    <p class="lede">六個分類，撳一下就篩返出嚟。</p>
+  </section>
+
+  <div class="filters">
+    <button data-filter="all" aria-pressed="true">All</button>
+    <button data-filter="wedding" aria-pressed="false">Wedding 婚禮</button>
+    <button data-filter="commercial" aria-pressed="false">Commercial 商業</button>
+    <button data-filter="aerial" aria-pressed="false">Aerial 航拍</button>
+    <button data-filter="corporate" aria-pressed="false">Corporate 企業</button>
+    <button data-filter="travel" aria-pressed="false">Travel 旅遊</button>
+    <button data-filter="portrait" aria-pressed="false">Portrait 人像</button>
+  </div>
+
+  <!-- 加新作品：複製一個 .card，改 data-cat / 圖片路徑 / 標題。
+       data-cat 必須係：wedding / commercial / aerial / corporate / travel / portrait -->
+  <section class="section" style="padding-top:0">
+    <div class="grid">
+
+      <a class="card" data-cat="wedding" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/wedding-01.jpg">
+          <img src="images/portfolio/wedding-01.jpg" alt="酒店婚禮攝影" loading="lazy"></figure>
+        <h3>Anna &amp; Ken</h3><p class="meta">The Langham · Wedding Day</p>
+      </a>
+
+      <a class="card" data-cat="wedding" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/wedding-02.jpg">
+          <img src="images/portfolio/wedding-02.jpg" alt="海邊婚禮攝影" loading="lazy"></figure>
+        <h3>Wing &amp; Marco</h3><p class="meta">Repulse Bay · Wedding Day</p>
+      </a>
+
+      <a class="card" data-cat="wedding" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/wedding-03.jpg">
+          <img src="images/portfolio/wedding-03.jpg" alt="京都 Pre-Wedding" loading="lazy"></figure>
+        <h3>Yuki &amp; Chris</h3><p class="meta">Kyoto · Pre-Wedding</p>
+      </a>
+
+      <a class="card" data-cat="commercial" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/commercial-01.jpg">
+          <img src="images/portfolio/commercial-01.jpg" alt="護膚品產品硬照" loading="lazy"></figure>
+        <h3>Skincare Launch</h3><p class="meta">產品硬照 · Commercial</p>
+      </a>
+
+      <a class="card" data-cat="commercial" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/commercial-02.jpg">
+          <img src="images/portfolio/commercial-02.jpg" alt="餐廳品牌形象片" loading="lazy"></figure>
+        <h3>Kitchen Story</h3><p class="meta">品牌形象片 · Commercial</p>
+      </a>
+
+      <a class="card" data-cat="commercial" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/commercial-03.jpg">
+          <img src="images/portfolio/commercial-03.jpg" alt="社交平台短片" loading="lazy"></figure>
+        <h3>Sneaker Drop</h3><p class="meta">社交平台短片 · Commercial</p>
+      </a>
+
+      <a class="card" data-cat="aerial" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/aerial-01.jpg">
+          <img src="images/portfolio/aerial-01.jpg" alt="樓盤航拍" loading="lazy"></figure>
+        <h3>Clearwater Bay</h3><p class="meta">地產樓盤 · Aerial</p>
+      </a>
+
+      <a class="card" data-cat="aerial" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/aerial-02.jpg">
+          <img src="images/portfolio/aerial-02.jpg" alt="工程進度航拍" loading="lazy"></figure>
+        <h3>Site Progress</h3><p class="meta">工程紀錄 · Aerial</p>
+      </a>
+
+      <a class="card" data-cat="corporate" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/corporate-01.jpg">
+          <img src="images/portfolio/corporate-01.jpg" alt="海外業務會議紀錄" loading="lazy"></figure>
+        <h3>Asia Sales Summit</h3><p class="meta">Singapore · 海外業務會議</p>
+      </a>
+
+      <a class="card" data-cat="corporate" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/corporate-02.jpg">
+          <img src="images/portfolio/corporate-02.jpg" alt="周年晚宴攝影" loading="lazy"></figure>
+        <h3>Annual Dinner</h3><p class="meta">周年晚宴 · Corporate</p>
+      </a>
+
+      <a class="card" data-cat="corporate" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/corporate-03.jpg">
+          <img src="images/portfolio/corporate-03.jpg" alt="展覽攤位拍攝" loading="lazy"></figure>
+        <h3>HKTDC Fair</h3><p class="meta">展覽 · Corporate</p>
+      </a>
+
+      <a class="card" data-cat="travel" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/travel-01.jpg">
+          <img src="images/portfolio/travel-01.jpg" alt="北海道旅遊宣傳片" loading="lazy"></figure>
+        <h3>Hokkaido Winter</h3><p class="meta">目的地短片 · Travel</p>
+      </a>
+
+      <a class="card" data-cat="travel" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/travel-02.jpg">
+          <img src="images/portfolio/travel-02.jpg" alt="酒店拍攝" loading="lazy"></figure>
+        <h3>Resort Feature</h3><p class="meta">酒店住宿 · Travel</p>
+      </a>
+
+      <a class="card" data-cat="portrait" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/portrait-01.jpg">
+          <img src="images/portfolio/portrait-01.jpg" alt="家庭全家福" loading="lazy"></figure>
+        <h3>The Chan Family</h3><p class="meta">全家福 · Portrait</p>
+      </a>
+
+      <a class="card" data-cat="portrait" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/portrait-02.jpg">
+          <img src="images/portfolio/portrait-02.jpg" alt="企業形象照" loading="lazy"></figure>
+        <h3>Executive Headshots</h3><p class="meta">專業形象照 · Portrait</p>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>想睇多啲某個分類？</h2>
+    <p>好多 project 因為保密協議冇公開，可以私下傾。</p>
+    <a class="btn" href="contact.html">查詢報價</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <a class="logo" href="index.html">281<span>Production</span></a>
+      <p class="meta">Photography · Video · Aerial · Hong Kong</p>
+    </div>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.facebook.com/281Production" target="_blank" rel="noopener">Facebook</a>
+    </nav>
+  </div>
+  <p class="copy">© <span data-year></span> 281 Production. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

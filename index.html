@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>281 Production — 香港攝影 · 錄影 · 航拍</title>
+<meta name="description" content="281 Production：香港一人製作單位。婚禮攝錄、商業廣告、航拍、海外業務會議、旅遊宣傳、人像攝影。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home">
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="bar">
+    <a class="logo" href="index.html">281<span>Production</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav" class="nav">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero：圖片 sticky，下一段捲上去蓋住，做出視差 -->
+  <section class="hero">
+    <div class="hero-media">
+      <figure class="frame hero-frame" data-label="images/hero.jpg">
+        <img src="images/hero.jpg" alt="281 Production 攝影作品" fetchpriority="high">
+      </figure>
+      <div class="hero-inner">
+        <p class="eyebrow rise" style="--d:0ms">Hong Kong · Photography · Video · Aerial</p>
+        <h1>
+          <span class="line"><span style="--d:120ms">One person.</span></span>
+          <span class="line"><span style="--d:240ms"><em>Every frame.</em></span></span>
+        </h1>
+        <p class="lede rise" style="--d:420ms">婚禮、商業廣告、航拍、海外業務會議、旅遊宣傳 —— 由傾偈到交片，一個人跟足全程。</p>
+        <div class="hero-actions rise" style="--d:540ms">
+          <a class="btn" href="services.html">睇服務範圍</a>
+          <a class="btn ghost light" href="portfolio.html">作品集</a>
+        </div>
+      </div>
+      <span class="hero-cue" aria-hidden="true">Scroll</span>
+    </div>
+  </section>
+
+  <!-- 之後所有內容要蓋住 sticky hero -->
+  <div class="over">
+
+    <!-- 跑馬燈：一眼睇晒六條業務線 -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>婚禮攝錄</span><i>◆</i><span>商業廣告</span><i>◆</i><span>航拍</span><i>◆</i><span>海外業務會議</span><i>◆</i><span>旅遊宣傳</span><i>◆</i><span>人像</span><i>◆</i>
+        <span>婚禮攝錄</span><i>◆</i><span>商業廣告</span><i>◆</i><span>航拍</span><i>◆</i><span>海外業務會議</span><i>◆</i><span>旅遊宣傳</span><i>◆</i><span>人像</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- Services：左邊 sticky 預覽，右邊分類列表 -->
+    <section class="section svc">
+      <div class="svc-head">
+        <p class="eyebrow">What we do</p>
+        <h2>服務範圍</h2>
+        <p class="svc-intro">一個人做曬，所以分類要講得清楚。</p>
+        <div class="svc-preview" aria-hidden="true">
+          <figure class="frame is-active" data-for="wedding" style="--ar:4/5" data-label="images/services/wedding.jpg">
+            <img src="images/services/wedding.jpg" alt="" loading="lazy"></figure>
+          <figure class="frame" data-for="commercial" style="--ar:4/5" data-label="images/services/commercial.jpg">
+            <img src="images/services/commercial.jpg" alt="" loading="lazy"></figure>
+          <figure class="frame" data-for="aerial" style="--ar:4/5" data-label="images/services/aerial.jpg">
+            <img src="images/services/aerial.jpg" alt="" loading="lazy"></figure>
+          <figure class="frame" data-for="corporate" style="--ar:4/5" data-label="images/services/corporate.jpg">
+            <img src="images/services/corporate.jpg" alt="" loading="lazy"></figure>
+          <figure class="frame" data-for="travel" style="--ar:4/5" data-label="images/services/travel.jpg">
+            <img src="images/services/travel.jpg" alt="" loading="lazy"></figure>
+          <figure class="frame" data-for="portrait" style="--ar:4/5" data-label="images/services/portrait.jpg">
+            <img src="images/services/portrait.jpg" alt="" loading="lazy"></figure>
+        </div>
+      </div>
+
+      <ol class="svc-list">
+        <li><a href="services.html#wedding" data-svc="wedding">
+          <span class="svc-num">01</span>
+          <span class="svc-body"><span class="svc-title">婚禮攝錄 <em>Wedding</em></span>
+          <span class="svc-tags">Wedding Day · Pre-Wedding · 註冊儀式 · 精華短片</span></span>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="services.html#commercial" data-svc="commercial">
+          <span class="svc-num">02</span>
+          <span class="svc-body"><span class="svc-title">商業廣告 <em>Commercial</em></span>
+          <span class="svc-tags">產品硬照 · 品牌形象片 · 社交平台短片 · 空間拍攝</span></span>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="services.html#aerial" data-svc="aerial">
+          <span class="svc-num">03</span>
+          <span class="svc-body"><span class="svc-title">航拍 <em>Aerial</em></span>
+          <span class="svc-tags">地產樓盤 · 工程進度 · 活動全景 · 風景素材</span></span>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="services.html#corporate" data-svc="corporate">
+          <span class="svc-num">04</span>
+          <span class="svc-body"><span class="svc-title">企業 · 海外業務會議 <em>Corporate</em></span>
+          <span class="svc-tags">隨團出埠紀錄 · 展覽 · 周年晚宴 · 企業人像</span></span>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="services.html#travel" data-svc="travel">
+          <span class="svc-num">05</span>
+          <span class="svc-body"><span class="svc-title">旅遊宣傳 <em>Travel</em></span>
+          <span class="svc-tags">目的地短片 · 行程實拍 · 酒店拍攝 · 內容包</span></span>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="services.html#portrait" data-svc="portrait">
+          <span class="svc-num">06</span>
+          <span class="svc-body"><span class="svc-title">人像 <em>Portrait</em></span>
+          <span class="svc-tags">個人形象照 · 全家福 · 孕婦寫真 · 初生嬰兒</span></span>
+          <span class="svc-arrow" aria-hidden="true">→</span>
+        </a></li>
+      </ol>
+    </section>
+
+    <!-- 數字帶 -->
+    <section class="stats">
+      <!-- TODO: 呢四個數字係估算，換返真數 -->
+      <div class="stat"><strong>500<sup>+</sup></strong><span>完成項目</span></div>
+      <div class="stat"><strong>12</strong><span>年經驗</span></div>
+      <div class="stat"><strong>20<sup>+</sup></strong><span>拍攝城市</span></div>
+      <div class="stat"><strong>1</strong><span>由頭跟到尾嘅人</span></div>
+    </section>
+
+    <!-- Featured work：非對稱編排，唔再係齊口格仔 -->
+    <section class="section">
+      <header class="section-head split">
+        <div>
+          <p class="eyebrow">Selected</p>
+          <h2>Featured Work</h2>
+        </div>
+        <a class="link" href="portfolio.html">See all work</a>
+      </header>
+
+      <div class="work-grid">
+        <a class="work-item" style="--col:1/8; --ar:16/11" href="portfolio.html#wedding">
+          <figure class="frame" data-label="images/work-01.jpg">
+            <img src="images/work-01.jpg" alt="酒店婚禮攝影" loading="lazy"></figure>
+          <div class="work-cap"><h3>Anna &amp; Ken</h3><p class="meta">The Langham · Wedding</p></div>
+        </a>
+
+        <a class="work-item" style="--col:9/13; --ar:3/4; --shift:7rem" href="portfolio.html#corporate">
+          <figure class="frame" data-label="images/work-02.jpg">
+            <img src="images/work-02.jpg" alt="海外業務會議紀錄" loading="lazy"></figure>
+          <div class="work-cap"><h3>Asia Sales Summit</h3><p class="meta">Singapore · Corporate</p></div>
+        </a>
+
+        <a class="work-item" style="--col:2/6; --ar:3/4" href="portfolio.html#aerial">
+          <figure class="frame" data-label="images/work-03.jpg">
+            <img src="images/work-03.jpg" alt="樓盤航拍" loading="lazy"></figure>
+          <div class="work-cap"><h3>Clearwater Bay</h3><p class="meta">地產樓盤 · Aerial</p></div>
+        </a>
+
+        <a class="work-item" style="--col:7/13; --ar:16/11; --shift:5rem" href="portfolio.html#commercial">
+          <figure class="frame" data-label="images/work-04.jpg">
+            <img src="images/work-04.jpg" alt="產品廣告拍攝" loading="lazy"></figure>
+          <div class="work-cap"><h3>Skincare Launch</h3><p class="meta">產品硬照 · Commercial</p></div>
+        </a>
+
+        <a class="work-item" style="--col:1/7; --ar:4/5" href="portfolio.html#travel">
+          <figure class="frame" data-label="images/work-05.jpg">
+            <img src="images/work-05.jpg" alt="旅遊宣傳拍攝" loading="lazy"></figure>
+          <div class="work-cap"><h3>Hokkaido Winter</h3><p class="meta">目的地短片 · Travel</p></div>
+        </a>
+
+        <a class="work-item" style="--col:8/13; --ar:1/1; --shift:8rem" href="portfolio.html#portrait">
+          <figure class="frame" data-label="images/work-06.jpg">
+            <img src="images/work-06.jpg" alt="家庭人像" loading="lazy"></figure>
+          <div class="work-cap"><h3>The Chan Family</h3><p class="meta">全家福 · Portrait</p></div>
+        </a>
+      </div>
+    </section>
+
+    <!-- About：大字 + 側邊圖 -->
+    <section class="section tint">
+      <div class="about-grid">
+        <figure class="frame" style="--ar:3/4" data-label="images/about.jpg">
+          <img src="images/about.jpg" alt="281 Production" loading="lazy">
+        </figure>
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>一個人<br>由頭跟到尾</h2>
+          <p>281 Production 係一人製作單位。由第一次傾偈、落場拍攝、剪接調色到交片，全部同一個人負責 —— 你唔會遇到「當日嚟嗰個唔係同你傾嗰個」呢件事。</p>
+          <p>業務由婚禮做到商業廣告、航拍同海外會議紀錄。範圍闊，係因為每一單都親自做過；亦都因為一個人一套器材，出差同臨時加拍都夾得快。</p>
+          <a class="link" href="about.html">More about us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section">
+      <header class="section-head">
+        <p class="eyebrow">Kind words</p>
+        <h2>Testimonials</h2>
+      </header>
+      <div class="quote-grid">
+        <blockquote>
+          <p>睇相嗰日喊咗成個鐘。好多細節我當日根本冇為意，佢全部影咗落嚟。</p>
+          <cite>Anna &amp; Ken · Wedding 2024</cite>
+        </blockquote>
+        <blockquote>
+          <p>隨團去咗三個城市，一個人搞掂相同片。行程好趕都跟得到，交片仲快過預期。</p>
+          <cite>企業客戶 · Corporate 2024</cite>
+        </blockquote>
+        <blockquote>
+          <p>航拍嗰條片一出，Agent 話 enquiry 多咗成倍。專業，而且好識揀角度。</p>
+          <cite>地產代理 · Aerial 2023</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta big">
+      <p class="eyebrow">Let's talk</p>
+      <h2>有 project<br>想傾？</h2>
+      <p>講低日期、地點同想要嘅嘢，通常 24 小時內回覆。</p>
+      <a class="btn" href="contact.html">查詢報價</a>
+    </section>
+
+    <footer class="site-footer">
+      <div class="foot-grid">
+        <div>
+          <a class="logo" href="index.html">281<span>Production</span></a>
+          <p class="meta">Photography · Video · Aerial · Hong Kong</p>
+        </div>
+        <nav>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+          <a href="https://www.facebook.com/281Production" target="_blank" rel="noopener">Facebook</a>
+        </nav>
+      </div>
+      <p class="copy">© <span data-year></span> 281 Production. All rights reserved.</p>
+    </footer>
+
+  </div><!-- /.over -->
+
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
