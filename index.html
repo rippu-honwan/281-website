@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="images/logo-mark-512.png" type="image/png">
+<link rel="apple-touch-icon" href="images/logo-mark-180.png">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="home">
@@ -16,7 +18,10 @@
 
 <header class="site-header">
   <div class="bar">
-    <a class="logo" href="index.html">281<span>Production</span></a>
+    <a class="logo" href="index.html" aria-label="281 Production">
+      <img src="images/logo-lockup-dark.png" alt="281 Production" width="900" height="131">
+      <img class="alt" src="images/logo-lockup-light.png" alt="" aria-hidden="true" width="900" height="131">
+    </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -35,8 +40,8 @@
   <!-- Hero：圖片 sticky，下一段捲上去蓋住，做出視差 -->
   <section class="hero">
     <div class="hero-media">
-      <figure class="frame hero-frame" data-label="images/hero.jpg">
-        <img src="images/hero.jpg" alt="281 Production 攝影作品" fetchpriority="high">
+      <figure class="frame hero-frame" data-label="images/aerial-02.jpg">
+        <img src="images/aerial-02.jpg" alt="啟德體育園與維港日落航拍" fetchpriority="high">
       </figure>
       <div class="hero-inner">
         <p class="eyebrow rise" style="--d:0ms">Hong Kong · Photography · Video · Aerial</p>
@@ -71,19 +76,21 @@
         <p class="eyebrow">What we do</p>
         <h2>服務範圍</h2>
         <p class="svc-intro">一個人做曬，所以分類要講得清楚。</p>
+        <!-- 未有相嘅分類會顯示灰框加檔名，擺返張相入去就自動出返 -->
         <div class="svc-preview" aria-hidden="true">
-          <figure class="frame is-active" data-for="wedding" style="--ar:4/5" data-label="images/services/wedding.jpg">
-            <img src="images/services/wedding.jpg" alt="" loading="lazy"></figure>
-          <figure class="frame" data-for="commercial" style="--ar:4/5" data-label="images/services/commercial.jpg">
-            <img src="images/services/commercial.jpg" alt="" loading="lazy"></figure>
-          <figure class="frame" data-for="aerial" style="--ar:4/5" data-label="images/services/aerial.jpg">
-            <img src="images/services/aerial.jpg" alt="" loading="lazy"></figure>
-          <figure class="frame" data-for="corporate" style="--ar:4/5" data-label="images/services/corporate.jpg">
-            <img src="images/services/corporate.jpg" alt="" loading="lazy"></figure>
-          <figure class="frame" data-for="travel" style="--ar:4/5" data-label="images/services/travel.jpg">
-            <img src="images/services/travel.jpg" alt="" loading="lazy"></figure>
-          <figure class="frame" data-for="portrait" style="--ar:4/5" data-label="images/services/portrait.jpg">
-            <img src="images/services/portrait.jpg" alt="" loading="lazy"></figure>
+          <figure class="frame" data-for="wedding" style="--ar:4/5" data-label="images/wedding-01.jpg">
+            <img src="images/wedding-01.jpg" alt="" loading="lazy"></figure>
+          <figure class="frame" data-for="commercial" style="--ar:4/5" data-label="images/commercial-01.jpg">
+            <img src="images/commercial-01.jpg" alt="" loading="lazy"></figure>
+          <!-- 預設顯示航拍：wedding 未有相，一入嚟唔想見住個灰框 -->
+          <figure class="frame is-active" data-for="aerial" style="--ar:4/5" data-label="images/aerial-01.jpg">
+            <img src="images/aerial-01.jpg" alt="" loading="lazy"></figure>
+          <figure class="frame" data-for="corporate" style="--ar:4/5" data-label="images/corporate-01.jpg">
+            <img src="images/corporate-01.jpg" alt="" loading="lazy"></figure>
+          <figure class="frame" data-for="travel" style="--ar:4/5" data-label="images/travel-01.jpg">
+            <img src="images/travel-01.jpg" alt="" loading="lazy"></figure>
+          <figure class="frame" data-for="portrait" style="--ar:4/5" data-label="images/portrait-04.jpg">
+            <img src="images/portrait-04.jpg" alt="" loading="lazy"></figure>
         </div>
       </div>
 
@@ -147,40 +154,40 @@
       </header>
 
       <div class="work-grid">
-        <a class="work-item" style="--col:1/8; --ar:16/11" href="portfolio.html#wedding">
-          <figure class="frame" data-label="images/work-01.jpg">
-            <img src="images/work-01.jpg" alt="酒店婚禮攝影" loading="lazy"></figure>
-          <div class="work-cap"><h3>Anna &amp; Ken</h3><p class="meta">The Langham · Wedding</p></div>
+        <a class="work-item" style="--col:1/8; --ar:16/11" href="portfolio.html#aerial">
+          <figure class="frame" data-label="images/aerial-03.jpg">
+            <img src="images/aerial-03.jpg" alt="啟德與維港黃昏航拍" loading="lazy"></figure>
+          <div class="work-cap"><h3>啟德 · 維港黃昏</h3><p class="meta">Kai Tak · Aerial</p></div>
         </a>
 
-        <a class="work-item" style="--col:9/13; --ar:3/4; --shift:7rem" href="portfolio.html#corporate">
-          <figure class="frame" data-label="images/work-02.jpg">
-            <img src="images/work-02.jpg" alt="海外業務會議紀錄" loading="lazy"></figure>
-          <div class="work-cap"><h3>Asia Sales Summit</h3><p class="meta">Singapore · Corporate</p></div>
+        <a class="work-item" style="--col:9/13; --ar:3/4; --shift:7rem" href="portfolio.html#travel">
+          <figure class="frame" data-label="images/travel-01.jpg">
+            <img src="images/travel-01.jpg" alt="西班牙 Segovia 城堡航拍" loading="lazy"></figure>
+          <div class="work-cap"><h3>Segovia, Spain</h3><p class="meta">海外航拍 · Travel</p></div>
         </a>
 
-        <a class="work-item" style="--col:2/6; --ar:3/4" href="portfolio.html#aerial">
-          <figure class="frame" data-label="images/work-03.jpg">
-            <img src="images/work-03.jpg" alt="樓盤航拍" loading="lazy"></figure>
-          <div class="work-cap"><h3>Clearwater Bay</h3><p class="meta">地產樓盤 · Aerial</p></div>
+        <a class="work-item" style="--col:2/6; --ar:3/4" href="portfolio.html#portrait">
+          <figure class="frame" data-label="images/portrait-03.jpg">
+            <img src="images/portrait-03.jpg" alt="百葉窗光影人像" loading="lazy"></figure>
+          <div class="work-cap"><h3>光影人像</h3><p class="meta">Studio · Portrait</p></div>
         </a>
 
-        <a class="work-item" style="--col:7/13; --ar:16/11; --shift:5rem" href="portfolio.html#commercial">
-          <figure class="frame" data-label="images/work-04.jpg">
-            <img src="images/work-04.jpg" alt="產品廣告拍攝" loading="lazy"></figure>
-          <div class="work-cap"><h3>Skincare Launch</h3><p class="meta">產品硬照 · Commercial</p></div>
+        <a class="work-item" style="--col:7/13; --ar:16/11; --shift:5rem" href="portfolio.html#aerial">
+          <figure class="frame" data-label="images/aerial-04.jpg">
+            <img src="images/aerial-04.jpg" alt="啟德體育園夜景航拍" loading="lazy"></figure>
+          <div class="work-cap"><h3>啟德體育園</h3><p class="meta">Kai Tak Sports Park · Aerial</p></div>
         </a>
 
-        <a class="work-item" style="--col:1/7; --ar:4/5" href="portfolio.html#travel">
-          <figure class="frame" data-label="images/work-05.jpg">
-            <img src="images/work-05.jpg" alt="旅遊宣傳拍攝" loading="lazy"></figure>
-          <div class="work-cap"><h3>Hokkaido Winter</h3><p class="meta">目的地短片 · Travel</p></div>
+        <a class="work-item" style="--col:1/7; --ar:4/5" href="portfolio.html#portrait">
+          <figure class="frame" data-label="images/portrait-01.jpg">
+            <img src="images/portrait-01.jpg" alt="專業商務形象照" loading="lazy"></figure>
+          <div class="work-cap"><h3>專業形象照</h3><p class="meta">Studio · Portrait</p></div>
         </a>
 
-        <a class="work-item" style="--col:8/13; --ar:1/1; --shift:8rem" href="portfolio.html#portrait">
-          <figure class="frame" data-label="images/work-06.jpg">
-            <img src="images/work-06.jpg" alt="家庭人像" loading="lazy"></figure>
-          <div class="work-cap"><h3>The Chan Family</h3><p class="meta">全家福 · Portrait</p></div>
+        <a class="work-item" style="--col:8/13; --ar:1/1; --shift:8rem" href="portfolio.html#aerial">
+          <figure class="frame" data-label="images/aerial-05.jpg">
+            <img src="images/aerial-05.jpg" alt="維港夜色高空俯瞰" loading="lazy"></figure>
+          <div class="work-cap"><h3>維港夜色</h3><p class="meta">Victoria Harbour · Aerial</p></div>
         </a>
       </div>
     </section>
@@ -188,8 +195,8 @@
     <!-- About：大字 + 側邊圖 -->
     <section class="section tint">
       <div class="about-grid">
-        <figure class="frame" style="--ar:3/4" data-label="images/about.jpg">
-          <img src="images/about.jpg" alt="281 Production" loading="lazy">
+        <figure class="frame" style="--ar:3/2" data-label="images/aerial-01.jpg">
+          <img src="images/aerial-01.jpg" alt="啟德體育園日落航拍" loading="lazy">
         </figure>
         <div>
           <p class="eyebrow">About</p>
@@ -234,7 +241,10 @@
     <footer class="site-footer">
       <div class="foot-grid">
         <div>
-          <a class="logo" href="index.html">281<span>Production</span></a>
+          <a class="logo" href="index.html" aria-label="281 Production">
+            <img src="images/logo-lockup-dark.png" alt="281 Production" width="900" height="131">
+          </a>
+          <img class="yatjai" src="images/logo-yatjai.png" alt="一製作" width="700" height="251">
           <p class="meta">Photography · Video · Aerial · Hong Kong</p>
         </div>
         <nav>

@@ -30,7 +30,7 @@ a { color: inherit; }
 
 h1, h2, h3 { font-family: var(--serif); font-weight: 300; line-height: 1.15; letter-spacing: .01em; }
 /* Cormorant 預設用舊體數字，「281」會變「28i」。凡有數字嘅地方逼返等高數字。 */
-.logo, .stat strong, .num, .svc-num, .copy { font-variant-numeric: lining-nums; }
+.stat strong, .num, .svc-num, .copy { font-variant-numeric: lining-nums; }
 h1 { font-size: clamp(2.75rem, 7vw, 5.5rem); }
 h2 { font-size: clamp(2rem, 4vw, 3.25rem); }
 h3 { font-size: clamp(1.25rem, 2vw, 1.6rem); }
@@ -87,15 +87,12 @@ em { font-style: italic; color: var(--sand); }
   display: flex; align-items: center; justify-content: space-between;
   gap: 1rem; padding: 1rem var(--pad);
 }
-.logo {
-  font-family: var(--serif); font-size: 1.5rem; letter-spacing: .06em;
-  text-decoration: none; line-height: 1;
-}
-.logo span {
-  display: block; font-family: var(--sans); font-size: .6rem;
-  letter-spacing: .3em; text-transform: uppercase; color: var(--ink-soft);
-  margin-top: .25rem;
-}
+.logo { display: block; line-height: 0; text-decoration: none; }
+.logo img { width: auto; height: clamp(1.9rem, 3.4vw, 2.35rem); }
+.logo .alt { display: none; }
+/* 首頁 header 未變實色時浮喺深色相上，改用白色版 logo */
+.home:not(.nav-solid) .site-header .logo img { display: none; }
+.home:not(.nav-solid) .site-header .logo .alt { display: block; }
 .nav { display: flex; gap: clamp(1rem, 2vw, 2rem); }
 .nav a {
   text-decoration: none; font-size: .78rem; letter-spacing: .16em;
@@ -144,7 +141,9 @@ em { font-style: italic; color: var(--sand); }
 .hero-frame img { animation: slow-zoom 14s ease-out forwards; }
 .hero-frame::before {
   content: ""; position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.15) 45%, rgba(0,0,0,.3));
+  /* 相好光，字要夠對比先睇得清 */
+  background: linear-gradient(to top,
+    rgba(0,0,0,.82) 0%, rgba(0,0,0,.55) 28%, rgba(0,0,0,.12) 58%, rgba(0,0,0,.45) 100%);
 }
 .hero-inner {
   position: relative; z-index: 2; padding: var(--pad);
@@ -262,7 +261,7 @@ em { font-style: italic; color: var(--sand); }
 
 /* Grid of work */
 .grid {
-  display: grid; gap: var(--gap);
+  display: grid; gap: var(--gap); align-items: start;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr));
   max-width: 84rem; margin: 0 auto;
 }
@@ -429,7 +428,10 @@ form button[type="submit"] { border: 0; cursor: pointer; font: inherit; }
   text-decoration: none; font-size: .75rem; letter-spacing: .18em; text-transform: uppercase;
 }
 .foot-grid nav a:hover { color: var(--sand); }
-.foot-grid .meta { margin-top: .75rem; }
+.site-footer .logo img { height: 2.6rem; }
+/* 「一製作」書法：公司中文名，做 footer 點綴 */
+.yatjai { width: auto; height: 1.95rem; margin-top: 1rem; opacity: .55; }
+.foot-grid .meta { margin-top: .6rem; }
 .copy {
   max-width: 84rem; margin: 2.5rem auto 0; padding-top: 1.5rem;
   border-top: 1px solid var(--line); font-size: .72rem; letter-spacing: .1em; color: var(--ink-soft);

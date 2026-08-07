@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portfolio — 281 Production</title>
-<meta name="description" content="281 Production 作品集：婚禮、商業廣告、航拍、企業會議、旅遊宣傳、人像攝影。">
+<meta name="description" content="281 Production 作品集：香港航拍、海外航拍、人像攝影。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="images/logo-mark-512.png" type="image/png">
+<link rel="apple-touch-icon" href="images/logo-mark-180.png">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,7 +18,10 @@
 
 <header class="site-header">
   <div class="bar">
-    <a class="logo" href="index.html">281<span>Production</span></a>
+    <a class="logo" href="index.html" aria-label="281 Production">
+      <img src="images/logo-lockup-dark.png" alt="281 Production" width="900" height="131">
+      <img class="alt" src="images/logo-lockup-light.png" alt="" aria-hidden="true" width="900" height="131">
+    </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -35,112 +40,86 @@
   <section class="page-head">
     <p class="eyebrow">Selected work</p>
     <h1>Portfolio</h1>
-    <p class="lede">六個分類，撳一下就篩返出嚟。</p>
+    <p class="lede">撳分類篩選。Wedding、Commercial、Corporate 嘅作品整理緊，稍後上載。</p>
   </section>
 
+  <!-- 只列出有相嘅分類。之後補齊 wedding / commercial / corporate 嘅相，
+       喺呢度加返 <button data-filter="wedding">…</button> 同對應 .card 就得。 -->
   <div class="filters">
     <button data-filter="all" aria-pressed="true">All</button>
-    <button data-filter="wedding" aria-pressed="false">Wedding 婚禮</button>
-    <button data-filter="commercial" aria-pressed="false">Commercial 商業</button>
     <button data-filter="aerial" aria-pressed="false">Aerial 航拍</button>
-    <button data-filter="corporate" aria-pressed="false">Corporate 企業</button>
-    <button data-filter="travel" aria-pressed="false">Travel 旅遊</button>
     <button data-filter="portrait" aria-pressed="false">Portrait 人像</button>
+    <button data-filter="travel" aria-pressed="false">Travel 海外</button>
   </div>
 
-  <!-- 加新作品：複製一個 .card，改 data-cat / 圖片路徑 / 標題。
-       data-cat 必須係：wedding / commercial / aerial / corporate / travel / portrait -->
+  <!-- 加新作品：複製一個 .card，改 data-cat / 圖片路徑 / --ar / 標題 -->
   <section class="section" style="padding-top:0">
     <div class="grid">
 
-      <a class="card" data-cat="wedding" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/wedding-01.jpg">
-          <img src="images/portfolio/wedding-01.jpg" alt="酒店婚禮攝影" loading="lazy"></figure>
-        <h3>Anna &amp; Ken</h3><p class="meta">The Langham · Wedding Day</p>
-      </a>
-
-      <a class="card" data-cat="wedding" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/wedding-02.jpg">
-          <img src="images/portfolio/wedding-02.jpg" alt="海邊婚禮攝影" loading="lazy"></figure>
-        <h3>Wing &amp; Marco</h3><p class="meta">Repulse Bay · Wedding Day</p>
-      </a>
-
-      <a class="card" data-cat="wedding" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/wedding-03.jpg">
-          <img src="images/portfolio/wedding-03.jpg" alt="京都 Pre-Wedding" loading="lazy"></figure>
-        <h3>Yuki &amp; Chris</h3><p class="meta">Kyoto · Pre-Wedding</p>
-      </a>
-
-      <a class="card" data-cat="commercial" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/commercial-01.jpg">
-          <img src="images/portfolio/commercial-01.jpg" alt="護膚品產品硬照" loading="lazy"></figure>
-        <h3>Skincare Launch</h3><p class="meta">產品硬照 · Commercial</p>
-      </a>
-
-      <a class="card" data-cat="commercial" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/commercial-02.jpg">
-          <img src="images/portfolio/commercial-02.jpg" alt="餐廳品牌形象片" loading="lazy"></figure>
-        <h3>Kitchen Story</h3><p class="meta">品牌形象片 · Commercial</p>
-      </a>
-
-      <a class="card" data-cat="commercial" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/commercial-03.jpg">
-          <img src="images/portfolio/commercial-03.jpg" alt="社交平台短片" loading="lazy"></figure>
-        <h3>Sneaker Drop</h3><p class="meta">社交平台短片 · Commercial</p>
+      <a class="card" data-cat="aerial" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/aerial-01.jpg">
+          <img src="images/aerial-01.jpg" alt="啟德體育園日落航拍" loading="lazy"></figure>
+        <h3>啟德日落</h3><p class="meta">Kai Tak · Aerial</p>
       </a>
 
       <a class="card" data-cat="aerial" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/aerial-01.jpg">
-          <img src="images/portfolio/aerial-01.jpg" alt="樓盤航拍" loading="lazy"></figure>
-        <h3>Clearwater Bay</h3><p class="meta">地產樓盤 · Aerial</p>
+        <figure class="frame" style="--ar:3/2" data-label="images/aerial-02.jpg">
+          <img src="images/aerial-02.jpg" alt="維港與啟德日落全景航拍" loading="lazy"></figure>
+        <h3>維港日落全景</h3><p class="meta">Victoria Harbour · Aerial</p>
       </a>
 
       <a class="card" data-cat="aerial" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/aerial-02.jpg">
-          <img src="images/portfolio/aerial-02.jpg" alt="工程進度航拍" loading="lazy"></figure>
-        <h3>Site Progress</h3><p class="meta">工程紀錄 · Aerial</p>
+        <figure class="frame" style="--ar:3/2" data-label="images/aerial-03.jpg">
+          <img src="images/aerial-03.jpg" alt="啟德與維港黃昏航拍" loading="lazy"></figure>
+        <h3>啟德 · 維港黃昏</h3><p class="meta">Kai Tak · Aerial</p>
       </a>
 
-      <a class="card" data-cat="corporate" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/corporate-01.jpg">
-          <img src="images/portfolio/corporate-01.jpg" alt="海外業務會議紀錄" loading="lazy"></figure>
-        <h3>Asia Sales Summit</h3><p class="meta">Singapore · 海外業務會議</p>
+      <a class="card" data-cat="aerial" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/aerial-04.jpg">
+          <img src="images/aerial-04.jpg" alt="啟德體育園夜景航拍" loading="lazy"></figure>
+        <h3>啟德體育園</h3><p class="meta">Kai Tak Sports Park · Aerial</p>
       </a>
 
-      <a class="card" data-cat="corporate" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/corporate-02.jpg">
-          <img src="images/portfolio/corporate-02.jpg" alt="周年晚宴攝影" loading="lazy"></figure>
-        <h3>Annual Dinner</h3><p class="meta">周年晚宴 · Corporate</p>
-      </a>
-
-      <a class="card" data-cat="corporate" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/corporate-03.jpg">
-          <img src="images/portfolio/corporate-03.jpg" alt="展覽攤位拍攝" loading="lazy"></figure>
-        <h3>HKTDC Fair</h3><p class="meta">展覽 · Corporate</p>
+      <a class="card" data-cat="aerial" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/aerial-05.jpg">
+          <img src="images/aerial-05.jpg" alt="維港夜色高空俯瞰航拍" loading="lazy"></figure>
+        <h3>維港夜色</h3><p class="meta">Victoria Harbour · Aerial</p>
       </a>
 
       <a class="card" data-cat="travel" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/travel-01.jpg">
-          <img src="images/portfolio/travel-01.jpg" alt="北海道旅遊宣傳片" loading="lazy"></figure>
-        <h3>Hokkaido Winter</h3><p class="meta">目的地短片 · Travel</p>
-      </a>
-
-      <a class="card" data-cat="travel" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/travel-02.jpg">
-          <img src="images/portfolio/travel-02.jpg" alt="酒店拍攝" loading="lazy"></figure>
-        <h3>Resort Feature</h3><p class="meta">酒店住宿 · Travel</p>
+        <figure class="frame" style="--ar:3/4" data-label="images/travel-01.jpg">
+          <img src="images/travel-01.jpg" alt="西班牙 Segovia 城堡與熱氣球航拍" loading="lazy"></figure>
+        <h3>Segovia, Spain</h3><p class="meta">海外航拍 · Travel</p>
       </a>
 
       <a class="card" data-cat="portrait" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/portrait-01.jpg">
-          <img src="images/portfolio/portrait-01.jpg" alt="家庭全家福" loading="lazy"></figure>
-        <h3>The Chan Family</h3><p class="meta">全家福 · Portrait</p>
+        <figure class="frame" style="--ar:3/4" data-label="images/portrait-01.jpg">
+          <img src="images/portrait-01.jpg" alt="專業商務形象照" loading="lazy"></figure>
+        <h3>專業形象照</h3><p class="meta">Studio · Portrait</p>
       </a>
 
       <a class="card" data-cat="portrait" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portfolio/portrait-02.jpg">
-          <img src="images/portfolio/portrait-02.jpg" alt="企業形象照" loading="lazy"></figure>
-        <h3>Executive Headshots</h3><p class="meta">專業形象照 · Portrait</p>
+        <figure class="frame" style="--ar:3/4" data-label="images/portrait-02.jpg">
+          <img src="images/portrait-02.jpg" alt="商務人像棚拍" loading="lazy"></figure>
+        <h3>商務人像</h3><p class="meta">Studio · Portrait</p>
+      </a>
+
+      <a class="card" data-cat="portrait" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portrait-03.jpg">
+          <img src="images/portrait-03.jpg" alt="百葉窗光影人像" loading="lazy"></figure>
+        <h3>光影人像</h3><p class="meta">Studio · Portrait</p>
+      </a>
+
+      <a class="card" data-cat="portrait" href="#">
+        <figure class="frame" style="--ar:3/4" data-label="images/portrait-04.jpg">
+          <img src="images/portrait-04.jpg" alt="商務形象照棚拍" loading="lazy"></figure>
+        <h3>商務形象照</h3><p class="meta">Studio · Portrait</p>
+      </a>
+
+      <a class="card" data-cat="portrait" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/portrait-05.jpg">
+          <img src="images/portrait-05.jpg" alt="嬰兒團體照棚拍" loading="lazy"></figure>
+        <h3>BB 團體照</h3><p class="meta">Studio · Portrait</p>
       </a>
 
     </div>
@@ -157,7 +136,10 @@
 <footer class="site-footer">
   <div class="foot-grid">
     <div>
-      <a class="logo" href="index.html">281<span>Production</span></a>
+      <a class="logo" href="index.html" aria-label="281 Production">
+        <img src="images/logo-lockup-dark.png" alt="281 Production" width="900" height="131">
+      </a>
+      <img class="yatjai" src="images/logo-yatjai.png" alt="一製作" width="700" height="251">
       <p class="meta">Photography · Video · Aerial · Hong Kong</p>
     </div>
     <nav>
