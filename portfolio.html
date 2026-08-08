@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portfolio — 281 Production</title>
-<meta name="description" content="281 Production 作品集：香港航拍、海外航拍、人像攝影。">
+<meta name="description" content="281 Production 作品集：婚禮、商業廣告、航拍、演出紀錄、旅遊宣傳、人像攝影。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -40,22 +40,76 @@
   <section class="page-head">
     <p class="eyebrow">Selected work</p>
     <h1>Portfolio</h1>
-    <p class="lede">撳分類篩選。Wedding、Commercial、Corporate 嘅作品整理緊，稍後上載。</p>
+    <p class="lede">六個分類，撳一下就篩返出嚟。</p>
   </section>
 
-  <!-- 只列出有相嘅分類。之後補齊 wedding / commercial / corporate 嘅相，
-       喺呢度加返 <button data-filter="wedding">…</button> 同對應 .card 就得。 -->
   <div class="filters">
     <button data-filter="all" aria-pressed="true">All</button>
+    <button data-filter="wedding" aria-pressed="false">Wedding 婚禮</button>
+    <button data-filter="commercial" aria-pressed="false">Commercial 商業</button>
     <button data-filter="aerial" aria-pressed="false">Aerial 航拍</button>
+    <button data-filter="corporate" aria-pressed="false">Corporate 演出企業</button>
+    <button data-filter="travel" aria-pressed="false">Travel 旅遊</button>
     <button data-filter="portrait" aria-pressed="false">Portrait 人像</button>
-    <button data-filter="travel" aria-pressed="false">Travel 海外</button>
   </div>
 
-  <!-- 加新作品：複製一個 .card，改 data-cat / 圖片路徑 / --ar / 標題 -->
+  <!-- 加新作品：複製一個 .card，改 data-cat / 圖片路徑 / --ar / 標題。
+       data-cat 必須係：wedding / commercial / aerial / corporate / travel / portrait
+       --ar 跟返相嘅實際比例：橫度 3/2、超闊 2/1、直度 2/3 -->
   <section class="section" style="padding-top:0">
     <div class="grid">
 
+      <!-- Wedding：求婚拍攝 2023 -->
+      <a class="card" data-cat="wedding" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/wedding-01.jpg">
+          <img src="images/wedding-01.jpg" alt="摩洛哥花磚背景情侶對望" loading="lazy"></figure>
+        <h3>花磚下的一刻</h3><p class="meta">求婚拍攝 · Wedding</p>
+      </a>
+
+      <a class="card" data-cat="wedding" href="#">
+        <figure class="frame" style="--ar:2/1" data-label="images/wedding-02.jpg">
+          <img src="images/wedding-02.jpg" alt="紅玫瑰中嘅鑽石戒指特寫" loading="lazy"></figure>
+        <h3>玫瑰與戒指</h3><p class="meta">細節特寫 · Wedding</p>
+      </a>
+
+      <a class="card" data-cat="wedding" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/wedding-03.jpg">
+          <img src="images/wedding-03.jpg" alt="求婚拍攝現場，攝影師工作中" loading="lazy"></figure>
+        <h3>拍攝現場</h3><p class="meta">求婚拍攝 · Wedding</p>
+      </a>
+
+      <a class="card" data-cat="wedding" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/wedding-04.jpg">
+          <img src="images/wedding-04.jpg" alt="金色鳥籠求婚場景" loading="lazy"></figure>
+        <h3>金籠求婚</h3><p class="meta">求婚拍攝 · Wedding</p>
+      </a>
+
+      <!-- Commercial：Student of the Year 2023 -->
+      <a class="card" data-cat="commercial" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/commercial-01.jpg">
+          <img src="images/commercial-01.jpg" alt="芭蕾舞排練，Student of the Year 拍攝" loading="lazy"></figure>
+        <h3>芭蕾</h3><p class="meta">Student of the Year · Commercial</p>
+      </a>
+
+      <a class="card" data-cat="commercial" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/commercial-02.jpg">
+          <img src="images/commercial-02.jpg" alt="學生戶外討論，Student of the Year 拍攝" loading="lazy"></figure>
+        <h3>戶外組</h3><p class="meta">Student of the Year · Commercial</p>
+      </a>
+
+      <a class="card" data-cat="commercial" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/commercial-03.jpg">
+          <img src="images/commercial-03.jpg" alt="校園團體照，Student of the Year 拍攝" loading="lazy"></figure>
+        <h3>校園團體</h3><p class="meta">Student of the Year · Commercial</p>
+      </a>
+
+      <a class="card" data-cat="commercial" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/commercial-04.jpg">
+          <img src="images/commercial-04.jpg" alt="學生人像，Student of the Year 拍攝" loading="lazy"></figure>
+        <h3>學生人像</h3><p class="meta">Student of the Year · Commercial</p>
+      </a>
+
+      <!-- Aerial：香港航拍 -->
       <a class="card" data-cat="aerial" href="#">
         <figure class="frame" style="--ar:3/2" data-label="images/aerial-01.jpg">
           <img src="images/aerial-01.jpg" alt="啟德體育園日落航拍" loading="lazy"></figure>
@@ -86,32 +140,71 @@
         <h3>維港夜色</h3><p class="meta">Victoria Harbour · Aerial</p>
       </a>
 
+      <!-- Corporate：音樂會 · 演出紀錄 -->
+      <a class="card" data-cat="corporate" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/corporate-01.jpg">
+          <img src="images/corporate-01.jpg" alt="朱亦兵鄭慧大提琴鋼琴之夜謝幕" loading="lazy"></figure>
+        <h3>大提琴鋼琴之夜</h3><p class="meta">香港金融大會堂 · 演出紀錄</p>
+      </a>
+
+      <a class="card" data-cat="corporate" href="#">
+        <figure class="frame" style="--ar:2/1" data-label="images/corporate-02.jpg">
+          <img src="images/corporate-02.jpg" alt="竹韻小集中樂團舞台全景" loading="lazy"></figure>
+        <h3>竹韻小集</h3><p class="meta">中樂團舞台 · 演出紀錄</p>
+      </a>
+
+      <!-- Travel：北海道札幌索朗祭 2023 -->
       <a class="card" data-cat="travel" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/travel-01.jpg">
+        <figure class="frame" style="--ar:2/3" data-label="images/travel-01.jpg">
           <img src="images/travel-01.jpg" alt="西班牙 Segovia 城堡與熱氣球航拍" loading="lazy"></figure>
         <h3>Segovia, Spain</h3><p class="meta">海外航拍 · Travel</p>
       </a>
 
+      <a class="card" data-cat="travel" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/travel-02.jpg">
+          <img src="images/travel-02.jpg" alt="札幌索朗祭紅衣鼓手" loading="lazy"></figure>
+        <h3>索朗祭 · 鼓手</h3><p class="meta">北海道札幌 · Travel</p>
+      </a>
+
+      <a class="card" data-cat="travel" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/travel-03.jpg">
+          <img src="images/travel-03.jpg" alt="札幌索朗祭太鼓演出" loading="lazy"></figure>
+        <h3>索朗祭 · 太鼓</h3><p class="meta">北海道札幌 · Travel</p>
+      </a>
+
+      <a class="card" data-cat="travel" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/travel-04.jpg">
+          <img src="images/travel-04.jpg" alt="札幌索朗祭群舞" loading="lazy"></figure>
+        <h3>索朗祭 · 群舞</h3><p class="meta">北海道札幌 · Travel</p>
+      </a>
+
+      <a class="card" data-cat="travel" href="#">
+        <figure class="frame" style="--ar:2/3" data-label="images/travel-05.jpg">
+          <img src="images/travel-05.jpg" alt="札幌索朗祭紅衣斗笠舞者" loading="lazy"></figure>
+        <h3>索朗祭 · 斗笠舞者</h3><p class="meta">北海道札幌 · Travel</p>
+      </a>
+
+      <!-- Portrait：商務形象照 + 竹韻小集樂師專輯 -->
       <a class="card" data-cat="portrait" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portrait-01.jpg">
+        <figure class="frame" style="--ar:2/3" data-label="images/portrait-01.jpg">
           <img src="images/portrait-01.jpg" alt="專業商務形象照" loading="lazy"></figure>
         <h3>專業形象照</h3><p class="meta">Studio · Portrait</p>
       </a>
 
       <a class="card" data-cat="portrait" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portrait-02.jpg">
+        <figure class="frame" style="--ar:2/3" data-label="images/portrait-02.jpg">
           <img src="images/portrait-02.jpg" alt="商務人像棚拍" loading="lazy"></figure>
         <h3>商務人像</h3><p class="meta">Studio · Portrait</p>
       </a>
 
       <a class="card" data-cat="portrait" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portrait-03.jpg">
+        <figure class="frame" style="--ar:2/3" data-label="images/portrait-03.jpg">
           <img src="images/portrait-03.jpg" alt="百葉窗光影人像" loading="lazy"></figure>
         <h3>光影人像</h3><p class="meta">Studio · Portrait</p>
       </a>
 
       <a class="card" data-cat="portrait" href="#">
-        <figure class="frame" style="--ar:3/4" data-label="images/portrait-04.jpg">
+        <figure class="frame" style="--ar:2/3" data-label="images/portrait-04.jpg">
           <img src="images/portrait-04.jpg" alt="商務形象照棚拍" loading="lazy"></figure>
         <h3>商務形象照</h3><p class="meta">Studio · Portrait</p>
       </a>
@@ -120,6 +213,30 @@
         <figure class="frame" style="--ar:3/2" data-label="images/portrait-05.jpg">
           <img src="images/portrait-05.jpg" alt="嬰兒團體照棚拍" loading="lazy"></figure>
         <h3>BB 團體照</h3><p class="meta">Studio · Portrait</p>
+      </a>
+
+      <a class="card" data-cat="portrait" href="#">
+        <figure class="frame" style="--ar:2/3" data-label="images/portrait-07.jpg">
+          <img src="images/portrait-07.jpg" alt="竹韻小集琵琶樂師，中式門框場景" loading="lazy"></figure>
+        <h3>琵琶 · 門框</h3><p class="meta">竹韻小集樂師專輯 · Portrait</p>
+      </a>
+
+      <a class="card" data-cat="portrait" href="#">
+        <figure class="frame" style="--ar:2/3" data-label="images/portrait-09.jpg">
+          <img src="images/portrait-09.jpg" alt="竹韻小集琵琶樂師，中式椅場景" loading="lazy"></figure>
+        <h3>琵琶 · 中式椅</h3><p class="meta">竹韻小集樂師專輯 · Portrait</p>
+      </a>
+
+      <a class="card" data-cat="portrait" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/portrait-06.jpg">
+          <img src="images/portrait-06.jpg" alt="竹韻小集揚琴樂師，紅色場景" loading="lazy"></figure>
+        <h3>揚琴</h3><p class="meta">竹韻小集樂師專輯 · Portrait</p>
+      </a>
+
+      <a class="card" data-cat="portrait" href="#">
+        <figure class="frame" style="--ar:3/2" data-label="images/portrait-08.jpg">
+          <img src="images/portrait-08.jpg" alt="竹韻小集笛樂師，竹林場景" loading="lazy"></figure>
+        <h3>笛 · 竹林</h3><p class="meta">竹韻小集樂師專輯 · Portrait</p>
       </a>
 
     </div>
