@@ -1,0 +1,14 @@
+# 281 Production
+
+# 查詢紀錄正常會寫喺 public_html 上一層，瀏覽器本身掂唔到。
+# 但萬一上一層唔可寫、fallback 咗寫落呢個資料夾，呢條規則就係第二道防線 ——
+# 客戶嘅姓名電話絕對唔可以俾人由網址直接打開。
+<FilesMatch "\.(csv|log)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>

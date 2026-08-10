@@ -1,2 +1,5 @@
 .DS_Store
 .playwright-mcp/
+
+# 查詢紀錄（含客戶個人資料，絕對唔可以入 git）
+*.csv

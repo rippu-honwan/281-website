@@ -58,6 +58,19 @@ if (preview) {
   });
 }
 
+// Contact 頁：contact.php 出錯會 redirect 返嚟帶 ?error=，喺度顯示返
+const formError = document.getElementById('form-error');
+if (formError) {
+  const msg = {
+    invalid: '稱呼或者 email 填得唔完整，麻煩再檢查一次。',
+    send: '系統一時寄唔出去，唔好意思。可以直接 WhatsApp 或者 email 我，一樣快。',
+  }[new URLSearchParams(location.search).get('error')];
+  if (msg) {
+    formError.textContent = msg;
+    formError.hidden = false;
+  }
+}
+
 // Portfolio 分類篩選（同一頁做曬，唔開八個 category page）
 const filters = document.querySelector('.filters');
 if (filters) {
