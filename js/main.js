@@ -18,16 +18,6 @@ toggle?.addEventListener('click', () => {
   nav.classList.toggle('open', !open);
 });
 
-// 首頁 header：捲過 hero 之後由透明變實色
-if (document.body.classList.contains('home')) {
-  const solid = () => document.body.classList.toggle('nav-solid', scrollY > innerHeight * .8);
-  addEventListener('scroll', solid, { passive: true });
-  addEventListener('resize', solid, { passive: true });
-  // 瀏覽器還原捲動位置 / bfcache 返回都唔會觸發 scroll，要另外補一次
-  addEventListener('pageshow', () => requestAnimationFrame(solid));
-  solid();
-}
-
 // Footer 年份
 document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 

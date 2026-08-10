@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f4f1ea">
 <title>281 Production — 香港攝影 · 錄影 · 航拍</title>
 <meta name="description" content="281 Production：香港一人製作單位。婚禮攝錄、商業廣告、航拍、海外業務會議、旅遊宣傳、人像攝影。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200;300;400&display=swap" rel="stylesheet">
 <link rel="icon" href="images/logo-mark-512.png" type="image/png">
 <link rel="apple-touch-icon" href="images/logo-mark-180.png">
 <link rel="stylesheet" href="css/style.css">
@@ -20,246 +21,251 @@
   <div class="bar">
     <a class="logo" href="index.html" aria-label="281 Production">
       <img src="images/logo-lockup-dark.png" alt="281 Production" width="900" height="131">
-      <img class="alt" src="images/logo-lockup-light.png" alt="" aria-hidden="true" width="900" height="131">
     </a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
     <nav id="nav" class="nav">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="contact.html">Contact</a>
+      <a href="index.html" aria-current="page">主頁<span class="en">Home</span></a>
+      <a href="about.html">關於<span class="en">About</span></a>
+      <a href="services.html">服務<span class="en">Services</span></a>
+      <a href="portfolio.html">作品<span class="en">Portfolio</span></a>
+      <a href="contact.html">聯絡<span class="en">Contact</span></a>
     </nav>
   </div>
 </header>
 
 <main id="main">
 
-  <!-- Hero：圖片 sticky，下一段捲上去蓋住，做出視差 -->
+  <!-- Hero：和紙底、書法主視覺，縱排句企喺書法同相中間。
+       唔用大相鋪滿 —— 留白本身就係呢個風格嘅主角。 -->
   <section class="hero">
-    <div class="hero-media">
-      <figure class="frame hero-frame" data-label="images/aerial-02.jpg">
-        <img src="images/aerial-02.jpg" alt="啟德體育園與維港日落航拍" fetchpriority="high">
-      </figure>
-      <div class="hero-inner">
-        <p class="eyebrow rise" style="--d:0ms">Hong Kong · Photography · Video · Aerial</p>
-        <h1>
-          <span class="line"><span style="--d:120ms">One person.</span></span>
-          <span class="line"><span style="--d:240ms"><em>Every frame.</em></span></span>
-        </h1>
-        <p class="lede rise" style="--d:420ms">婚禮、商業廣告、航拍、海外業務會議、旅遊宣傳 —— 由傾偈到交片，一個人跟足全程。</p>
-        <div class="hero-actions rise" style="--d:540ms">
-          <a class="btn" href="services.html">睇服務範圍</a>
-          <a class="btn ghost light" href="portfolio.html">作品集</a>
-        </div>
+    <div class="hero-copy">
+      <img class="hero-brush" src="images/logo-yatjai.png" alt="一製作" width="700" height="251">
+      <h1>一個人，由頭跟到尾<span class="en">Hong Kong · Photography · Video · Aerial</span></h1>
+      <p class="lede">婚禮、商業廣告、航拍、海外業務會議、旅遊宣傳 —— 由傾偈到交片，同一個人跟足全程。</p>
+      <div class="hero-actions">
+        <a class="btn" href="services.html">睇服務範圍</a>
+        <a class="btn ghost" href="portfolio.html">作品集</a>
       </div>
-      <span class="hero-cue" aria-hidden="true">Scroll</span>
+    </div>
+
+    <p class="tate hero-tate">攝影・錄影・航拍<br><b>香港・一人製作</b></p>
+
+    <figure class="frame hero-photo" data-label="images/aerial-02.jpg">
+      <img src="images/aerial-02.jpg" alt="啟德體育園與維港日落航拍" fetchpriority="high">
+    </figure>
+  </section>
+
+  <!-- Services：左邊縱排題 + sticky 預覽，右邊漢數字列表 -->
+  <section class="section svc">
+    <div class="svc-head">
+      <p class="eyebrow">What we do</p>
+      <h2>服務範圍</h2>
+      <!-- 六個分類各一張代表作。換相只需改 src / data-label -->
+      <div class="svc-preview" aria-hidden="true">
+        <figure class="frame is-active" data-for="wedding" data-label="images/wedding-01.jpg">
+          <img src="images/wedding-01.jpg" alt="" loading="lazy"></figure>
+        <figure class="frame" data-for="commercial" data-label="images/commercial-01.jpg">
+          <img src="images/commercial-01.jpg" alt="" loading="lazy"></figure>
+        <figure class="frame" data-for="aerial" data-label="images/aerial-01.jpg">
+          <img src="images/aerial-01.jpg" alt="" loading="lazy"></figure>
+        <figure class="frame" data-for="corporate" data-label="images/corporate-01.jpg">
+          <img src="images/corporate-01.jpg" alt="" loading="lazy"></figure>
+        <figure class="frame" data-for="travel" data-label="images/travel-05.jpg">
+          <img src="images/travel-05.jpg" alt="" loading="lazy"></figure>
+        <figure class="frame" data-for="portrait" data-label="images/portrait-04.jpg">
+          <img src="images/portrait-04.jpg" alt="" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <ol class="svc-list">
+      <li><a href="services.html#wedding" data-svc="wedding">
+        <span class="svc-num">壹</span>
+        <span class="svc-title">婚禮攝錄</span>
+        <span class="svc-body">
+          <span class="svc-en">Wedding</span>
+          <span class="svc-tags">Wedding Day・Pre-Wedding・註冊儀式・精華短片</span>
+        </span>
+        <span class="svc-arrow" aria-hidden="true">→</span>
+      </a></li>
+      <li><a href="services.html#commercial" data-svc="commercial">
+        <span class="svc-num">貳</span>
+        <span class="svc-title">商業廣告</span>
+        <span class="svc-body">
+          <span class="svc-en">Commercial</span>
+          <span class="svc-tags">產品硬照・品牌形象片・社交平台短片・空間拍攝</span>
+        </span>
+        <span class="svc-arrow" aria-hidden="true">→</span>
+      </a></li>
+      <li><a href="services.html#aerial" data-svc="aerial">
+        <span class="svc-num">參</span>
+        <span class="svc-title">航拍</span>
+        <span class="svc-body">
+          <span class="svc-en">Aerial</span>
+          <span class="svc-tags">地產樓盤・工程進度・活動全景・風景素材</span>
+        </span>
+        <span class="svc-arrow" aria-hidden="true">→</span>
+      </a></li>
+      <li><a href="services.html#corporate" data-svc="corporate">
+        <span class="svc-num">肆</span>
+        <span class="svc-title">企業演出</span>
+        <span class="svc-body">
+          <span class="svc-en">Corporate</span>
+          <span class="svc-tags">音樂會・演出紀錄・隨團出埠・展覽・企業人像</span>
+        </span>
+        <span class="svc-arrow" aria-hidden="true">→</span>
+      </a></li>
+      <li><a href="services.html#travel" data-svc="travel">
+        <span class="svc-num">伍</span>
+        <span class="svc-title">旅遊宣傳</span>
+        <span class="svc-body">
+          <span class="svc-en">Travel</span>
+          <span class="svc-tags">目的地短片・行程實拍・酒店拍攝・內容包</span>
+        </span>
+        <span class="svc-arrow" aria-hidden="true">→</span>
+      </a></li>
+      <li><a href="services.html#portrait" data-svc="portrait">
+        <span class="svc-num">陸</span>
+        <span class="svc-title">人像</span>
+        <span class="svc-body">
+          <span class="svc-en">Portrait</span>
+          <span class="svc-tags">個人形象照・全家福・孕婦寫真・初生嬰兒</span>
+        </span>
+        <span class="svc-arrow" aria-hidden="true">→</span>
+      </a></li>
+    </ol>
+  </section>
+
+  <!-- 數字帶 -->
+  <section class="stats">
+    <!-- TODO: 呢四個數字係估算，換返真數 -->
+    <div class="stat"><strong>500<sup>+</sup></strong><span>完成項目</span></div>
+    <div class="stat"><strong>12</strong><span>年經驗</span></div>
+    <div class="stat"><strong>20<sup>+</sup></strong><span>拍攝城市</span></div>
+    <div class="stat"><strong>1</strong><span>由頭跟到尾嘅人</span></div>
+  </section>
+
+  <!-- Featured work：錯落編排，說明縱排貼喺相右邊 -->
+  <section class="section">
+    <header class="section-head split">
+      <h2>作品</h2>
+      <div>
+        <p class="eyebrow">Selected work</p>
+        <p class="lede">六個分類入面揀出嚟嘅幾張。</p>
+      </div>
+      <a class="link" href="portfolio.html">See all work</a>
+    </header>
+
+    <div class="work-grid">
+      <a class="work-item" style="--col:1/7; --ar:4/5" href="portfolio.html#aerial">
+        <figure class="frame" data-label="images/aerial-03.jpg">
+          <img src="images/aerial-03.jpg" alt="啟德與維港黃昏航拍" loading="lazy"></figure>
+        <div class="work-cap"><h3>啟德・維港黃昏</h3><p class="meta">Kai Tak · Aerial</p></div>
+      </a>
+
+      <a class="work-item" style="--col:8/13; --ar:3/4; --shift:9rem" href="portfolio.html#portrait">
+        <figure class="frame" data-label="images/portrait-07.jpg">
+          <img src="images/portrait-07.jpg" alt="竹韻小集琵琶樂師，中式門框場景" loading="lazy"></figure>
+        <div class="work-cap"><h3>琵琶・門框</h3><p class="meta">竹韻小集 · Portrait</p></div>
+      </a>
+
+      <a class="work-item" style="--col:2/7; --ar:3/4" href="portfolio.html#travel">
+        <figure class="frame" data-label="images/travel-05.jpg">
+          <img src="images/travel-05.jpg" alt="札幌索朗祭紅衣斗笠舞者" loading="lazy"></figure>
+        <div class="work-cap"><h3>索朗祭・斗笠舞者</h3><p class="meta">北海道札幌 · Travel</p></div>
+      </a>
+
+      <a class="work-item" style="--col:8/12; --ar:4/5; --shift:6rem" href="portfolio.html#wedding">
+        <figure class="frame" data-label="images/wedding-01.jpg">
+          <img src="images/wedding-01.jpg" alt="摩洛哥花磚背景情侶對望" loading="lazy"></figure>
+        <div class="work-cap"><h3>花磚下的一刻</h3><p class="meta">求婚拍攝 · Wedding</p></div>
+      </a>
+
+      <a class="work-item" style="--col:1/6; --ar:3/4" href="portfolio.html#commercial">
+        <figure class="frame" data-label="images/commercial-01.jpg">
+          <img src="images/commercial-01.jpg" alt="芭蕾舞排練，Student of the Year 拍攝" loading="lazy"></figure>
+        <div class="work-cap"><h3>芭蕾</h3><p class="meta">Student of the Year · Commercial</p></div>
+      </a>
+
+      <a class="work-item" style="--col:7/13; --ar:4/3; --shift:10rem" href="portfolio.html#corporate">
+        <figure class="frame" data-label="images/corporate-01.jpg">
+          <img src="images/corporate-01.jpg" alt="朱亦兵鄭慧大提琴鋼琴之夜謝幕" loading="lazy"></figure>
+        <div class="work-cap"><h3>大提琴鋼琴之夜</h3><p class="meta">金融大會堂 · Corporate</p></div>
+      </a>
     </div>
   </section>
 
-  <!-- 之後所有內容要蓋住 sticky hero -->
-  <div class="over">
-
-    <!-- 跑馬燈：一眼睇晒六條業務線 -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>婚禮攝錄</span><i>◆</i><span>商業廣告</span><i>◆</i><span>航拍</span><i>◆</i><span>海外業務會議</span><i>◆</i><span>旅遊宣傳</span><i>◆</i><span>人像</span><i>◆</i>
-        <span>婚禮攝錄</span><i>◆</i><span>商業廣告</span><i>◆</i><span>航拍</span><i>◆</i><span>海外業務會議</span><i>◆</i><span>旅遊宣傳</span><i>◆</i><span>人像</span><i>◆</i>
+  <!-- About -->
+  <section class="section tint">
+    <div class="about-grid">
+      <figure class="frame" style="--ar:3/4" data-label="images/aerial-01.jpg">
+        <img src="images/aerial-01.jpg" alt="啟德體育園日落航拍" loading="lazy">
+      </figure>
+      <div>
+        <p class="eyebrow">About</p>
+        <h2>一個人，由頭跟到尾</h2>
+        <p>281 Production 係一人製作單位。由第一次傾偈、落場拍攝、剪接調色到交片，全部同一個人負責 —— 你唔會遇到「當日嚟嗰個唔係同你傾嗰個」呢件事。</p>
+        <p>業務由婚禮做到商業廣告、航拍同海外會議紀錄。範圍闊，係因為每一單都親自做過；亦都因為一個人一套器材，出差同臨時加拍都夾得快。</p>
+        <a class="link" href="about.html">More about us</a>
       </div>
     </div>
+  </section>
 
-    <!-- Services：左邊 sticky 預覽，右邊分類列表 -->
-    <section class="section svc">
-      <div class="svc-head">
-        <p class="eyebrow">What we do</p>
-        <h2>服務範圍</h2>
-        <p class="svc-intro">一個人做曬，所以分類要講得清楚。</p>
-        <!-- 六個分類各一張代表作。換相只需改 src / data-label -->
-        <div class="svc-preview" aria-hidden="true">
-          <figure class="frame is-active" data-for="wedding" style="--ar:4/5" data-label="images/wedding-01.jpg">
-            <img src="images/wedding-01.jpg" alt="" loading="lazy"></figure>
-          <figure class="frame" data-for="commercial" style="--ar:4/5" data-label="images/commercial-01.jpg">
-            <img src="images/commercial-01.jpg" alt="" loading="lazy"></figure>
-          <figure class="frame" data-for="aerial" style="--ar:4/5" data-label="images/aerial-01.jpg">
-            <img src="images/aerial-01.jpg" alt="" loading="lazy"></figure>
-          <figure class="frame" data-for="corporate" style="--ar:4/5" data-label="images/corporate-01.jpg">
-            <img src="images/corporate-01.jpg" alt="" loading="lazy"></figure>
-          <figure class="frame" data-for="travel" style="--ar:4/5" data-label="images/travel-05.jpg">
-            <img src="images/travel-05.jpg" alt="" loading="lazy"></figure>
-          <figure class="frame" data-for="portrait" style="--ar:4/5" data-label="images/portrait-04.jpg">
-            <img src="images/portrait-04.jpg" alt="" loading="lazy"></figure>
-        </div>
-      </div>
-
-      <ol class="svc-list">
-        <li><a href="services.html#wedding" data-svc="wedding">
-          <span class="svc-num">01</span>
-          <span class="svc-body"><span class="svc-title">婚禮攝錄 <em>Wedding</em></span>
-          <span class="svc-tags">Wedding Day · Pre-Wedding · 註冊儀式 · 精華短片</span></span>
-          <span class="svc-arrow" aria-hidden="true">→</span>
-        </a></li>
-        <li><a href="services.html#commercial" data-svc="commercial">
-          <span class="svc-num">02</span>
-          <span class="svc-body"><span class="svc-title">商業廣告 <em>Commercial</em></span>
-          <span class="svc-tags">產品硬照 · 品牌形象片 · 社交平台短片 · 空間拍攝</span></span>
-          <span class="svc-arrow" aria-hidden="true">→</span>
-        </a></li>
-        <li><a href="services.html#aerial" data-svc="aerial">
-          <span class="svc-num">03</span>
-          <span class="svc-body"><span class="svc-title">航拍 <em>Aerial</em></span>
-          <span class="svc-tags">地產樓盤 · 工程進度 · 活動全景 · 風景素材</span></span>
-          <span class="svc-arrow" aria-hidden="true">→</span>
-        </a></li>
-        <li><a href="services.html#corporate" data-svc="corporate">
-          <span class="svc-num">04</span>
-          <span class="svc-body"><span class="svc-title">企業 · 演出紀錄 <em>Corporate</em></span>
-          <span class="svc-tags">音樂會 · 演出紀錄 · 隨團出埠 · 展覽 · 企業人像</span></span>
-          <span class="svc-arrow" aria-hidden="true">→</span>
-        </a></li>
-        <li><a href="services.html#travel" data-svc="travel">
-          <span class="svc-num">05</span>
-          <span class="svc-body"><span class="svc-title">旅遊宣傳 <em>Travel</em></span>
-          <span class="svc-tags">目的地短片 · 行程實拍 · 酒店拍攝 · 內容包</span></span>
-          <span class="svc-arrow" aria-hidden="true">→</span>
-        </a></li>
-        <li><a href="services.html#portrait" data-svc="portrait">
-          <span class="svc-num">06</span>
-          <span class="svc-body"><span class="svc-title">人像 <em>Portrait</em></span>
-          <span class="svc-tags">個人形象照 · 全家福 · 孕婦寫真 · 初生嬰兒</span></span>
-          <span class="svc-arrow" aria-hidden="true">→</span>
-        </a></li>
-      </ol>
-    </section>
-
-    <!-- 數字帶 -->
-    <section class="stats">
-      <!-- TODO: 呢四個數字係估算，換返真數 -->
-      <div class="stat"><strong>500<sup>+</sup></strong><span>完成項目</span></div>
-      <div class="stat"><strong>12</strong><span>年經驗</span></div>
-      <div class="stat"><strong>20<sup>+</sup></strong><span>拍攝城市</span></div>
-      <div class="stat"><strong>1</strong><span>由頭跟到尾嘅人</span></div>
-    </section>
-
-    <!-- Featured work：非對稱編排，唔再係齊口格仔 -->
-    <section class="section">
-      <header class="section-head split">
-        <div>
-          <p class="eyebrow">Selected</p>
-          <h2>Featured Work</h2>
-        </div>
-        <a class="link" href="portfolio.html">See all work</a>
-      </header>
-
-      <div class="work-grid">
-        <a class="work-item" style="--col:1/8; --ar:16/11" href="portfolio.html#aerial">
-          <figure class="frame" data-label="images/aerial-03.jpg">
-            <img src="images/aerial-03.jpg" alt="啟德與維港黃昏航拍" loading="lazy"></figure>
-          <div class="work-cap"><h3>啟德 · 維港黃昏</h3><p class="meta">Kai Tak · Aerial</p></div>
-        </a>
-
-        <a class="work-item" style="--col:9/13; --ar:3/4; --shift:7rem" href="portfolio.html#portrait">
-          <figure class="frame" data-label="images/portrait-07.jpg">
-            <img src="images/portrait-07.jpg" alt="竹韻小集琵琶樂師，中式門框場景" loading="lazy"></figure>
-          <div class="work-cap"><h3>琵琶 · 門框</h3><p class="meta">竹韻小集樂師專輯 · Portrait</p></div>
-        </a>
-
-        <a class="work-item" style="--col:2/6; --ar:3/4" href="portfolio.html#travel">
-          <figure class="frame" data-label="images/travel-05.jpg">
-            <img src="images/travel-05.jpg" alt="札幌索朗祭紅衣斗笠舞者" loading="lazy"></figure>
-          <div class="work-cap"><h3>索朗祭 · 斗笠舞者</h3><p class="meta">北海道札幌 · Travel</p></div>
-        </a>
-
-        <a class="work-item" style="--col:7/13; --ar:16/11; --shift:5rem" href="portfolio.html#wedding">
-          <figure class="frame" data-label="images/wedding-01.jpg">
-            <img src="images/wedding-01.jpg" alt="摩洛哥花磚背景情侶對望" loading="lazy"></figure>
-          <div class="work-cap"><h3>花磚下的一刻</h3><p class="meta">求婚拍攝 · Wedding</p></div>
-        </a>
-
-        <a class="work-item" style="--col:1/7; --ar:3/2" href="portfolio.html#commercial">
-          <figure class="frame" data-label="images/commercial-01.jpg">
-            <img src="images/commercial-01.jpg" alt="芭蕾舞排練，Student of the Year 拍攝" loading="lazy"></figure>
-          <div class="work-cap"><h3>芭蕾</h3><p class="meta">Student of the Year · Commercial</p></div>
-        </a>
-
-        <a class="work-item" style="--col:8/13; --ar:1/1; --shift:8rem" href="portfolio.html#corporate">
-          <figure class="frame" data-label="images/corporate-01.jpg">
-            <img src="images/corporate-01.jpg" alt="朱亦兵鄭慧大提琴鋼琴之夜謝幕" loading="lazy"></figure>
-          <div class="work-cap"><h3>大提琴鋼琴之夜</h3><p class="meta">香港金融大會堂 · Corporate</p></div>
-        </a>
-      </div>
-    </section>
-
-    <!-- About：大字 + 側邊圖 -->
-    <section class="section tint">
-      <div class="about-grid">
-        <figure class="frame" style="--ar:3/2" data-label="images/aerial-01.jpg">
-          <img src="images/aerial-01.jpg" alt="啟德體育園日落航拍" loading="lazy">
-        </figure>
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>一個人<br>由頭跟到尾</h2>
-          <p>281 Production 係一人製作單位。由第一次傾偈、落場拍攝、剪接調色到交片，全部同一個人負責 —— 你唔會遇到「當日嚟嗰個唔係同你傾嗰個」呢件事。</p>
-          <p>業務由婚禮做到商業廣告、航拍同海外會議紀錄。範圍闊，係因為每一單都親自做過；亦都因為一個人一套器材，出差同臨時加拍都夾得快。</p>
-          <a class="link" href="about.html">More about us</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section">
-      <header class="section-head">
+  <!-- Testimonials -->
+  <section class="section">
+    <header class="section-head">
+      <h2>客戶說話</h2>
+      <div>
         <p class="eyebrow">Kind words</p>
-        <h2>Testimonials</h2>
-      </header>
-      <div class="quote-grid">
-        <blockquote>
-          <p>睇相嗰日喊咗成個鐘。好多細節我當日根本冇為意，佢全部影咗落嚟。</p>
-          <cite>Anna &amp; Ken · Wedding 2024</cite>
-        </blockquote>
-        <blockquote>
-          <p>隨團去咗三個城市，一個人搞掂相同片。行程好趕都跟得到，交片仲快過預期。</p>
-          <cite>企業客戶 · Corporate 2024</cite>
-        </blockquote>
-        <blockquote>
-          <p>航拍嗰條片一出，Agent 話 enquiry 多咗成倍。專業，而且好識揀角度。</p>
-          <cite>地產代理 · Aerial 2023</cite>
-        </blockquote>
+        <p class="lede">做完一單最實在嘅回音。</p>
       </div>
-    </section>
+    </header>
+    <div class="quote-grid">
+      <blockquote>
+        <p>睇相嗰日喊咗成個鐘。好多細節我當日根本冇為意，佢全部影咗落嚟。</p>
+        <cite>Anna &amp; Ken · Wedding 2024</cite>
+      </blockquote>
+      <blockquote>
+        <p>隨團去咗三個城市，一個人搞掂相同片。行程好趕都跟得到，交片仲快過預期。</p>
+        <cite>企業客戶 · Corporate 2024</cite>
+      </blockquote>
+      <blockquote>
+        <p>航拍嗰條片一出，Agent 話 enquiry 多咗成倍。專業，而且好識揀角度。</p>
+        <cite>地產代理 · Aerial 2023</cite>
+      </blockquote>
+    </div>
+  </section>
 
-    <!-- CTA -->
-    <section class="cta big">
-      <p class="eyebrow">Let's talk</p>
-      <h2>有 project<br>想傾？</h2>
-      <p>講低日期、地點同想要嘅嘢，通常 24 小時內回覆。</p>
-      <a class="btn" href="contact.html">查詢報價</a>
-    </section>
-
-    <footer class="site-footer">
-      <div class="foot-grid">
-        <div>
-          <a class="logo" href="index.html" aria-label="281 Production">
-            <img src="images/logo-lockup-dark.png" alt="281 Production" width="900" height="131">
-          </a>
-          <img class="yatjai" src="images/logo-yatjai.png" alt="一製作" width="700" height="251">
-          <p class="meta">Photography · Video · Aerial · Hong Kong</p>
-        </div>
-        <nav>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="portfolio.html">Portfolio</a>
-          <a href="contact.html">Contact</a>
-          <a href="https://www.facebook.com/281Production" target="_blank" rel="noopener">Facebook</a>
-        </nav>
-      </div>
-      <p class="copy">© <span data-year></span> 281 Production. All rights reserved.</p>
-    </footer>
-
-  </div><!-- /.over -->
+  <!-- CTA -->
+  <section class="cta">
+    <span class="seal" aria-hidden="true">二八一</span>
+    <h2>有嘢想拍？</h2>
+    <p>講低日期、地點同想要嘅嘢，通常 24 小時內回覆。</p>
+    <a class="btn" href="contact.html">查詢報價</a>
+  </section>
 
 </main>
+
+<footer class="site-footer">
+  <div class="foot-grid">
+    <div>
+      <a class="logo" href="index.html" aria-label="281 Production">
+        <img src="images/logo-lockup-light.png" alt="281 Production" width="900" height="131">
+      </a>
+      <img class="yatjai" src="images/logo-yatjai.png" alt="一製作" width="700" height="251">
+      <p class="meta">Photography · Video · Aerial · Hong Kong</p>
+    </div>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.facebook.com/281Production" target="_blank" rel="noopener">Facebook</a>
+    </nav>
+  </div>
+  <p class="copy">© <span data-year></span> 281 Production. All rights reserved.</p>
+</footer>
 
 <!-- 浮動 WhatsApp 按鈕。換真號碼：sed -i '' 's/85200000000/852你嘅8位數字/g' *.html -->
 <a class="wa" href="https://wa.me/85200000000?text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E6%94%9D%E5%BD%B1%E6%9C%8D%E5%8B%99"
